@@ -1,10 +1,22 @@
-## Run The Project Directly On Your Localhost using Given Below
+## Run The Project Directly On Your Localhost using Link Given Below
 
 Use The Link []()
 
-## Available Scripts
 
-In the project directory, you can run:
+#Introduction
 
-### `npm start`
+This is a simple todo application made using react js.no Databse is connected so all the data is stored on the client side only.Once the page is refreshed all the tasks are cleared out.
 
+##Operations:
+1. Add Tasks
+2. Delet tasks
+3. Filter Out Tasks
+4. Change Status of Tasks( completed or not )
+
+
+ ##'React Concepts Covered'
+
+ 1. Functional Components
+ 2. ES6 import/Exports
+ 3. Hooks => useState()
+ 4. Props & States
