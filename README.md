@@ -7,7 +7,7 @@ Use The Link [https://suman196pokhrel.github.io/react-Todo-Application/](https:/
 
 #Introduction
 
-This is a simple todo application made using react js.no Databse is connected so all the data is stored 
+This is a simple todo application made using react js.No Databse is connected so all the data is stored 
 on the client side only.Once the page is refreshed all the tasks are cleared out.
 
 
