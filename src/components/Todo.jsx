@@ -26,7 +26,7 @@ function Todo({todo,setTodos,todos,inputText,setInputText}) {
 
      return (
           <div className='todoList'>
-               <li className='todoItem'>{todo.text}</li>
+               <li className={`todoItem ${todo.completed ? 'completed':'notCompleted'} `}>{todo.text}</li>
                <div className='todoBtns'>
                     <Button variant="outlined" color="primary" onClick={checkTodo}> Check </Button>
                     <Button variant="outlined" color="secondary" onClick={deleteTodo}>Delete </Button>

@@ -11,15 +11,16 @@ function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
 
      const addTodos = (e) => {
           e.preventDefault();
-          var newValue = {
-               id: Math.floor(Math.random() * 10000),
-               text: inputText,
-               completed: false
+          if(inputText !== ''){
+               var newValue = {
+                    id: Math.floor(Math.random() * 10000),
+                    text: inputText,
+                    completed: false
+               }
+               setTodos([newValue, ...todos])
+               
           }
-
-          setTodos([newValue, ...todos])
-          // console.log([newValue,...todos])
-          setInputText('')
+          setInputText('');
      }
 
 

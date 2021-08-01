@@ -13,10 +13,10 @@ body{
   margin-top: 10vh;
   text-align: center;
   padding: 30px;
-  height: 50vh;
-  width: 70vw;
+  height: 70vh;
+  width: 80vw;
   background-color: white;
-  overflow-y: hidden;
+  overflow-x: hidden;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(114, 114, 114, 0.562);
 
@@ -48,8 +48,13 @@ form{
 .todoItem{
   list-style: none;
   font-family: 'Roboto';
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
+  background-color: rgb(229, 202, 255);
+  border-radius: 10px;
+  width: 100%;
+  text-align: left;
+  padding:5px 0 5px 10px;
   
 
 }
@@ -61,6 +66,7 @@ form{
   display: flex;
   flex-direction: row;
   border-bottom: 2px solid rgb(218, 218, 218);
+  
   
 }
 
@@ -82,8 +88,26 @@ form{
 
 .listContainer{
   overflow-y: scroll;
-  height: 250px;
+  height: 400px;
+  transition: 0.7s;
 }
+
+
+.completed{
+  text-decoration: line-through;
+  color: rgb(185, 185, 185);
+}
+
+.notCompleted{
+  text-decoration: none;
+  
+}
+
+.item-exit-active{
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
 
 
 @media screen and (max-width: 500px){
