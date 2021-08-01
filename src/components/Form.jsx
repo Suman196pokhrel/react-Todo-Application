@@ -1,47 +1,51 @@
+import { Button, TextField, Typography } from '@material-ui/core';
 import React from 'react'
 
-function Form({inputText,setInputText,todos,setTodos,setStatus}) {
-     
-     
-     const onChangeHandler =(e)=>{
+function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
+
+
+     const onChangeHandler = (e) => {
           let val = e.target.value;
           setInputText(val)
      }
 
-     const addTodos = (e)=>{
+     const addTodos = (e) => {
           e.preventDefault();
           var newValue = {
-               id:Math.floor(Math.random()*10000),
-               text:inputText,
-               completed:false
+               id: Math.floor(Math.random() * 10000),
+               text: inputText,
+               completed: false
           }
 
-          setTodos([newValue,...todos])
+          setTodos([newValue, ...todos])
           // console.log([newValue,...todos])
           setInputText('')
      }
 
 
-     const statusHandler = (e)=>{
+     const statusHandler = (e) => {
           setStatus(e.target.value)
      }
 
-     
+
      return (
-          <div className='todoForm'>
-             <form>
-               <input onChange={onChangeHandler} type="text" value={inputText} name="todoForm" id="todoForm"/>
-               <button onClick={addTodos}>Add Todos</button>
-               
-               <select onChange={statusHandler}>
+
+          <form onSubmit={(e) => { e.preventDefault() }}>
+               <div className='form1'>
+                    <TextField autoComplete='off' id="outlined-basic" label="Outlined" variant="outlined" onChange={onChangeHandler} type="text" value={inputText} name="todoForm" />
+                    <Button className='button1' variant="contained" color="primary" onClick={addTodos}>Add Todos </Button>
+               </div>
+
+
+               <select onChange={statusHandler} className='comboBox'>
                     <option >All</option>
                     <option >Completed</option>
                     <option >Not Completed</option>
-                 
+
                </select>
 
-             </form>
-          </div>
+          </form>
+
      )
 }
 

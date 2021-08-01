@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Form from './components/Form';
 import List from './components/List';
+import {Card, Typography} from '@material-ui/core'
 
 
 function App() {
@@ -37,23 +38,29 @@ function App() {
 
   return (
     <div className="App">
-     <h1>ToDo Applicaiton</h1>
+        <Typography variant='h3'>
+          Todo Application
+        </Typography>
+        <hr></hr>
 
-    <Form 
-    todos = {todos}
-    setTodos ={setTodos}
-    inputText={inputText}
-     setInputText={setInputText}
-    setStatus={setStatus}
-     />
+        <Form 
+        todos = {todos}
+        setTodos ={setTodos}
+        inputText={inputText}
+        setInputText={setInputText}
+        setStatus={setStatus}
+        />
 
-    <List 
-    todos = {todos}
-     setTodos={setTodos}
-     inputText={inputText}
-     setInputText={setInputText}
-     filteredTodos = {filteredTodos}
-     />
+        <div className='listContainer'>
+          <List 
+          todos = {todos}
+          setTodos={setTodos}
+          inputText={inputText}
+          setInputText={setInputText}
+          filteredTodos = {filteredTodos}
+          />
+        </div>
+        
 
     </div>
   );

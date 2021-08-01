@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(238, 238, 238);
 }
 
-.App-link {
-  color: #61dafb;
+#outlined-basic{
+  min-width: 250px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App {
+  margin-top: 10vh;
+  text-align: center;
+  padding: 30px;
+  height: 50vh;
+  width: 70vw;
+  background-color: white;
+  overflow-y: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(114, 114, 114, 0.562);
+
+}
+
+form{
+  
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.comboBox{
+  
+  height: 40px;
+  min-width: 400px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid rgb(185, 185, 185);
+  border-radius: 4px;
+  background-color: rgb(225, 221, 255);
+}
+.comboBox:focus{
+  border: 2px solid rgb(78, 78, 78);
+}
+
+.todoItem{
+  list-style: none;
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: 400;
+  
+
+}
+
+.todoList{
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid rgb(218, 218, 218);
+  
+}
+
+.form1{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 60%;
+  gap: 20px;
+  
+}
+
+.button1{
+  width: 200px;
+  height: 60px;
+}
+
+.listContainer{
+  overflow-y: scroll;
+  height: 250px;
+}
+
+
+@media screen and (max-width: 500px){
+ 
+  .comboBox{
+    position: relative;
+    min-width: 30px;
+    font-size: 13px;
+    margin: 20px;
+    top: -30px;
+    
   }
-  to {
-    transform: rotate(360deg);
+
+  .button1{
+    width: 200px;
+    height: 40px;
+    font-size: 10px;
   }
+
+  #outlined-basic{
+    min-width: 150px;
+    font: 10px;
+  }
+
+  .form1{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    gap: 20px;
+    
+  }
+
+  form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .todoBtns{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
 }

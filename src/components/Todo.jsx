@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core'
 import React from 'react'
 
 function Todo({todo,setTodos,todos,inputText,setInputText}) {
@@ -26,8 +27,11 @@ function Todo({todo,setTodos,todos,inputText,setInputText}) {
      return (
           <div className='todoList'>
                <li className='todoItem'>{todo.text}</li>
-               <button onClick={checkTodo}> Check </button>
-               <button onClick={deleteTodo}>Delete </button>
+               <div className='todoBtns'>
+                    <Button variant="outlined" color="primary" onClick={checkTodo}> Check </Button>
+                    <Button variant="outlined" color="secondary" onClick={deleteTodo}>Delete </Button>
+               </div>
+               
           </div>
      )
 }
